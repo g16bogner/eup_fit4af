@@ -23,7 +23,10 @@ class Movie
 end
 
 movie1 = Movie.new("batman", 40)
-puts movie1.title
-movie1.title = "Superman"
-puts movie1
+movie2 = Movie.new("spiderman")
+movie3 = Movie.new('superman')
+movies = [movie1, movie2, movie3]
+movies.each do |movie|
+	puts movie
+end
 
