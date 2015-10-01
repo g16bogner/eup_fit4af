@@ -24,11 +24,10 @@ end
 
 player1 = Player.new('Theo', 99)
 player2 = Player.new('Peter')
+player3 = Player.new('Ludmilla')
+players = [player1, player2, player3]
 
-puts player2
-puts player2.name
-player2.w00t
-player2.w00t
-puts player2
-player1.blam
-puts player1
+puts "Anzahl Spieler: #{players.count}"
+players.each do |player|
+	puts player
+end
