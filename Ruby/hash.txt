@@ -1,0 +1,19 @@
+Beim Anlegen eines Hashes gibt es drei verschiedene, prinzipiell gleichwertige Schreibweisen:
+
+hash_var = { "s1" => "Audi", "s2" => "BWM" }
+ => {"s1"=>"Audi", "s2"=>"BWM"} 
+
+hash_var2 = { :wert1 => "Ninja Turteles", :wert2 => "was anderes" }
+ => {:wert1=>"Ninja Turteles", :wert2=>"was anderes"} 
+
+hash_var3 = { drittens: "Talisker", viertens: "Laphroig" }
+ => {:drittens=>"Talisker", :viertens=>"Laphroig"}
+
+Ein leerer Hash:
+	hash_leer1 = {}
+	hash_leer2 = Hash.new
+
+Ausgeben von einem Hash:
+	hash_var3.each do |key,val|
+		puts "Schlüssel: #{key} und Wert: #{val}"
+	end
