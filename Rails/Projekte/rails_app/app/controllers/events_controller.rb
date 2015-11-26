@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
 	def index
-		@events = %w(Alt-J Zoo Paartherapie)
-						
+		@events = Event.all
+
 	end
 end
