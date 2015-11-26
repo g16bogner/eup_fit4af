@@ -1,0 +1,2 @@
+Anlegen eines Controllers:
+	rails g controller events
