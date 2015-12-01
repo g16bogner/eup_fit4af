@@ -6,3 +6,9 @@ Erzeugen Sie die Tabelle ,movies' mit dem rake-Command
 
 Erstellen Sie mit Hilfe der Console 3 movies:
 superman, ironman, spiderman mit einer Bewertung und einem geschätzten Umsatz
+
+Erstellen Sie eine Migration, die zwei Tabellenfelder hinzufügt: description vom Typ Text und released_on vom Datentyp datetime.
+
+Aktualisieren Sie den Tabelleninhalt.
+
+Integrieren Sie die neuen Tabelleninhalte in die Webapp.
