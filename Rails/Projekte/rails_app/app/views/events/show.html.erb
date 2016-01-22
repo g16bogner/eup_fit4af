@@ -13,5 +13,8 @@
 	<%= @event.price %>
 </p>
 
-<p><%= link_to "Alle Events anzeigen", events_path %></p>
+<p>
+	<%= link_to "Alle Events anzeigen", events_path %>
+	<%= link_to "Back", request.referer %>
+</p>
 
