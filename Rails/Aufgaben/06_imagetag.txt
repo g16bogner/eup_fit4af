@@ -1,2 +1,2 @@
 Aufgabe:
- Fügen Sie die Spalten: poster image file, cast, director, duration hinzu und integrieren SIe diese in die App.
+ Fügen Sie die Spalten: poster_image_file, cast, director, duration hinzu und integrieren SIe diese in die App.

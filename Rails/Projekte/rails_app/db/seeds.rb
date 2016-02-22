@@ -5,3 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Event.create(:name => "Film schauen", :image_file => "batman.jpg", :capacity => 5, :description => "Bati und seine Kumpane", :location => "Gotham City", :price => 1000, :start_at => "2017-01-01")
+
