@@ -1,5 +1,9 @@
 class Event < ActiveRecord::Base
 
+	validates :name, presence: true
+	validates :price, numericality: true
+	validates :description, length: {minimum: 25}
+
 	def free?
 		self.price.present? && self.price > 0 
 	end

@@ -14,15 +14,25 @@ class EventsController < ApplicationController
 	end
 
 	def create
-		@event = Event.create(event_params)
-		redirect_to events_url
+		@event = Event.new(event_params)
+		if @event.save 
+			redirect_to events_url
+		else
+			render :new
+		end
 	end
+
 	def edit
 	end
+	
 	def update
-		@event.update(event_params)
-		redirect_to events_url
+		if @event.update(event_params)
+			redirect_to events_url
+		else
+			render :edit
+		end
 	end
+
 	def destroy
 		@event.destroy
 		redirect_to events_url
