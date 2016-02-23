@@ -1,7 +1,9 @@
 class EventsController < ApplicationController
 	before_action :set_event, only: [:show, :edit, :update, :destroy]
+	before_action :set_sidebar_events
+
 	def index
-		@events = Event.where("start_at >= ?", Time.now)
+		@events = Event.all #where("start_at >= ?", Time.now)
 	end
 
 	def show
@@ -30,6 +32,9 @@ class EventsController < ApplicationController
 		def event_params
 			params.require(:event).permit(:name, :image_file, :capacity, :description, :location, :price, :start_at)
 		end
+		def set_sidebar_events
+			@sidebar_events = Event.upcoming
+		end	
 		def set_event
 			@event = Event.find(params[:id ])
 		end
