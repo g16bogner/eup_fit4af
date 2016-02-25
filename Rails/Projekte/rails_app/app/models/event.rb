@@ -1,5 +1,6 @@
 class Event < ActiveRecord::Base
-
+	has_many :registrations
+	
 	validates :name, presence: true
 	validates :price, numericality: true
 	validates :description, length: {minimum: 25}
