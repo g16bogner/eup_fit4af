@@ -1,0 +1,29 @@
+<h3>Listing Projekts</h3>
+
+<table>
+	<head>
+		<tr>
+			<td>Title</td>
+			<td>Description</td>
+			<td>Start Date</td>
+			<td></td>
+		</tr>
+	</head>
+	<body>
+		<% @projects.each do |project| %>
+			<tr>
+				<td><%= project.title %></td>
+				<td><%= project.description %></td>
+				<td><%= project.start_date %></td>
+				<td>
+					<%= link_to "<i class='fi-eye'></i>".html_safe, project_path(project.id) %> | 
+					<%= link_to "<i class='fi-pencil'></i>".html_safe, edit_project_path(project.id) %> | 
+					<%= link_to "<i class='fi-trash'></i>".html_safe, project_path(project.id), method: :delete %>
+				</td>
+			</tr>
+		<% end %>
+	</body>
+
+</table>
+
+<%= link_to "Neues Projekt anlegen", new_project_path, class: "button" %>

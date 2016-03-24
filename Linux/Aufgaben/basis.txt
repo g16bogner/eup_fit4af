@@ -1,0 +1,16 @@
+1. Legen Sie mit dem Befehl 'touch' eine Datei bash_info.txt an
+2. Oeffnen Sie die Datei mit dem vim
+3. Beschreiben Sie die Bestandteile der aktuellen Eingabeaufforderung
+4. Notieren Sie dort, wie Sie einen Befehl auf zwei Zeilen verteilen
+5. Notieren Sie welchen Unterschied es zwischen langen und kurzen Parametern eines Bash-Befehls gibt
+6. Notieren Sie den Unterschied zwischen externen und internen - Bash-Befehlen und beschreiben Sie die Funktion des Befehls 'type'
+7. Notieren Sie mit welchen Befehlen Sie die manpages fuer den Befehl 'ls' auf der Konsole aufrufen koennen, wie Sie in dort nach einem Begriff suchen koennen und wie Sie die manpages beenden koennen.
+8. Speichern Sie die Datei.
+9. Lassen Sie sich die Datei mit einem Konsolenbefehl anzeigen
+10. Erstellen Sie in Ihrem Homeverzeichnis das Directory 'scriptings'
+11. Kopieren Sie die Datei bash_info.txt in das Verzeichnis scriptings
+12. Benennen Sie die Datei bash_info.txt in bash_infos.txt um
+13. Erstellen Sie in Ihrem Homeverzeichnis den Ordner infos.
+14. Kopieren Sie die Datei bash_infos.txt in den Ordner infos.
+15. Loeschen Sie den Ordner scriptings mitsamt dem Inhalt
+16. Oeffnen Sie die Datei bash_infos mit dem vim und notieren Sie die Befehle mit Erlaeuterungen die Sie fuer die letzten Aufgaben verwendet haben.
