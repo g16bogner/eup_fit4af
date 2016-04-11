@@ -1,0 +1,8 @@
+a. erzeugen Sie ein Verzeichnis links_etc
+b. erstellen Sie in dem Verzeichnis eine Datei test
+c. schreiben Sie in die Datei die Zeichenkette 'Verzeichnisinhalt:'
+d. haengen Sie die Ausgabe des Befehls ls -li an
+f. erzeugen Sie einen link link1 und einen link2 auf die Datei test
+g. erzeugen Sie einen Softlink auf das Verzeichnis Dokumente Ihres Homeverzeichnissen
+h. haengen Sie die Ausgabe des Befehls ls -li an die existierende Datei test an
+i. suchen sie einen Bash-Befehl mit dem die Worte einer Datei gezählt werden. Schreiben Sie die Anzahl der Worte der Datei test in die Datei anzahl. Hat die Datei test beispielsweise 10 Worte, soll in der Datei anzahl folgender Text stehen: 10 Worte.
