@@ -10,6 +10,13 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_user
 
+  def require_signin
+    unless current_user
+      session[:intended_url] = request.url
+      redirect_to new_session_url, alert: "Ersteinloggen, dann wohlfühlen."
+    end
+  end
+
   private
 	  def set_sidebar_events
 			@sidebar_events = Event.upcoming

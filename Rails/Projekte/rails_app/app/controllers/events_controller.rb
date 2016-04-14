@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
 	before_action :set_event, only: [:show, :edit, :update, :destroy]
-	
+	before_action :require_signin, except: [:index]	
 
 	def index
 		@events = Event.all #where("start_at >= ?", Time.now)
