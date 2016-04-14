@@ -28,6 +28,11 @@
     <%= f.password_field :password_confirmation %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <% # if @user.new_record? %>
+    <% if controller.action_name == 'new' %>
+      <%= f.submit "Create Account" %>
+    <% else %>
+      <%= f.submit "Update Account" %>
+    <% end %>
   </div>
 <% end %>
