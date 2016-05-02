@@ -17,18 +17,24 @@
 	<%= pluralize(@event.spots_left, 'spot') %>
 
 </p>
-<% if @likers.any? %>
-  <h3>Likers</h3>
-  <ul>
-    <% @likers.each do |user| %>
-      <li>
-        <%= link_to user.name, user %>
-      </li>
-    <% end %>
-  </ul>
-<% end %>
-
-
+<h3>Likers</h3>
+<ul id="add_liker">
+	<% if @likers.any? %>
+	    <% @likers.each do |user| %>
+	      <li id="like_<%= user.likes.find_by(event_id: @event.id).id %>">
+	        <%= link_to user.name, user %>
+	      </li>
+	    <% end %>
+	<% else %>
+		<li id="no_liker">Sei der 1. Liker, du lieber Raucher.</li>
+	<% end %>
+</ul>
+<div id="unlike_button">
+	<%= button_to("Unlike", event_like_path(@event, @current_like), class: "button", method: :delete, remote: true) if @current_like.present? %>
+</div>
+<div id="like_button">
+	<%= button_to "Like", event_likes_path(@event), remote: true, class: "button" %>
+</div>
 
 <p>
 	<div class="button-group">
@@ -40,3 +46,13 @@
 	</div>
 </p>
 
+<script>
+	$(document).ready(function(){
+		<% if @current_like.present? %>
+			$("#like_button").hide();
+		<% else %>
+			$("#unlike_button").hide();
+		<% end %>
+	});
+
+</script>
