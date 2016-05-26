@@ -6,7 +6,10 @@ class EventsController < ApplicationController
 	def index
 		@events = Event.all #where("start_at >= ?", Time.now)
 	end
-
+	
+	def past
+		@events = Event.past
+	end
 	def show
 		@likers = @event.likers
 		if current_user
